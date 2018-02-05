@@ -3,12 +3,11 @@ package com.apps.radio;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private TextView mTextMessage;
 
@@ -18,14 +17,17 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    //mTextMessage.setText(R.string.title_home);
+                case R.id.tab_categories:
+                    Log.d("0", "clicked home button");
                     return true;
-                case R.id.navigation_dashboard:
-                    //mTextMessage.setText(R.string.title_dashboard);
+                case R.id.tab_favorites:
+                    Log.d("0", "clicked home button");
                     return true;
-                case R.id.navigation_notifications:
-                    //mTextMessage.setText(R.string.title_notifications);
+                case R.id.tab_courses:
+                    Log.d("0", "clicked dashboard button");
+                    return true;
+                case R.id.tab_more:
+                    Log.d("0", "clicked notification button");
                     return true;
             }
             return false;
@@ -37,14 +39,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //隐藏导航栏和状态栏
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                /*| View.SYSTEM_UI_FLAG_FULLSCREEN*/;
-        decorView.setSystemUiVisibility(uiOptions);
+        //隐藏底部导航栏
+        //this.hideSystemBottomNavigationBar();
+
+        //自定义Title Bar
+        initActionBar();
+
+        //取消Tab Bar的shift mode
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
 
         //mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
