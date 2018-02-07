@@ -8,15 +8,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
     private ViewPager viewPager;
+    private RCPagerAdapter pagerAdapter;
     private ArrayList<View> viewList;
-    private MyPagerAdapter myPagerAdapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -68,7 +68,7 @@ public class MainActivity extends BaseActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-
+        //ViewPager
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -106,18 +106,20 @@ public class MainActivity extends BaseActivity {
             }
         });
 
+        //Set adapter for view pager
         setupViewPager(viewPager);
+
+//        fragmentPagerAdapter = new RCFragmentPagerAdapter(getSupportFragmentManager());
+//        fragmentPagerAdapter.addFragment(new CategoryFragment());
+//        fragmentPagerAdapter.addFragment(new FavoriteFragment());
+//        fragmentPagerAdapter.addFragment(new CourseFragment());
+//        fragmentPagerAdapter.addFragment(new MoreFragment());
+//        viewPager.setAdapter(fragmentPagerAdapter);
+
 
     }
 
     private void setupViewPager(ViewPager viewPager) {
-//        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-//
-//        adapter.addFragment(BaseFragment.newInstance("新闻"));
-//        adapter.addFragment(BaseFragment.newInstance("图书"));
-//        adapter.addFragment(BaseFragment.newInstance("发现"));
-//        adapter.addFragment(BaseFragment.newInstance("更多"));
-//        viewPager.setAdapter(adapter);
 
         viewList = new ArrayList<View>();
         LayoutInflater li = getLayoutInflater();
@@ -125,8 +127,8 @@ public class MainActivity extends BaseActivity {
         viewList.add(li.inflate(R.layout.pageview1,null,false));
         viewList.add(li.inflate(R.layout.pageview2,null,false));
         viewList.add(li.inflate(R.layout.pageview3,null,false));
-        myPagerAdapter = new MyPagerAdapter(viewList);
-        viewPager.setAdapter(myPagerAdapter);
+        pagerAdapter = new RCPagerAdapter(viewList);
+        viewPager.setAdapter(pagerAdapter);
     }
 
 

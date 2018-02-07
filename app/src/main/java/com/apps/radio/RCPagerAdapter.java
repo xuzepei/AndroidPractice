@@ -12,14 +12,14 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public class MyPagerAdapter extends PagerAdapter {
+public class RCPagerAdapter extends PagerAdapter {
 
     private ArrayList<View> viewLists;
 
-    public MyPagerAdapter() {
+    public RCPagerAdapter() {
     }
 
-    public MyPagerAdapter(ArrayList<View> viewLists) {
+    public RCPagerAdapter(ArrayList<View> viewLists) {
         super();
         this.viewLists = viewLists;
     }
