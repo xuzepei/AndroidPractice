@@ -26,8 +26,6 @@ public class BaseActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
         setSupportActionBar(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.toolbar_title);
-        textView.setText(R.string.title_0);
         setSupportActionBar(toolbar);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
@@ -45,6 +43,16 @@ public class BaseActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void updateTitle(String title) {
+        TextView textView = (TextView) findViewById(R.id.toolbar_title);
+        textView.setText(title);
+    }
+
+    public void updateTitle(int resID) {
+        TextView textView = (TextView) findViewById(R.id.toolbar_title);
+        textView.setText(resID);
     }
 
     public int getStatusBarHeight() {
