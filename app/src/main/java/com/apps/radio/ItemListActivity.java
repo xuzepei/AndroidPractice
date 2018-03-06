@@ -80,35 +80,49 @@ public class ItemListActivity extends BaseActivity {
 
         Log.i("HttpRequest: ", urlString);
 
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder().get().url(urlString).build();
-        Call call = client.newCall(request);
-        //异步调用并设置回调函数
-        call.enqueue(new Callback() {
+        HttpRequestManager manager = HttpRequestManager.getInstance();
+        manager.request(urlString, null, new HttpRequestCallback() {
             @Override
-            public void onFailure(Call call, IOException e) {
-                Log.i("HttpRequest: ", "Failed");
-            }
-
-            @Override
-            public void onResponse(Call call, final Response response) throws IOException {
-                final String responseStr = response.body().string();
+            public void onFinish(final String resultString, Object token) {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-
-                        try {
-                            String result = Tool.decode(responseStr,Constants.DATE);
-                            Log.i("HttpRequest: ", "Succeeded, result: " + result);
-                        } catch (Exception e) {
-                            Log.i("HttpRequest: ", "Decode failed.");
-                        }
-
-
+                        Log.i("onFinish: ", resultString);
                     }
                 });
             }
         });
+
+
+//        OkHttpClient client = new OkHttpClient();
+//        Request request = new Request.Builder().get().url(urlString).build();
+//        Call call = client.newCall(request);
+//        //异步调用并设置回调函数
+//        call.enqueue(new Callback() {
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//                Log.i("HttpRequest: ", "Failed");
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, final Response response) throws IOException {
+//                final String responseStr = response.body().string();
+//                runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//
+//                        try {
+//                            String result = Tool.decode(responseStr,Constants.DATE);
+//                            Log.i("HttpRequest: ", "Succeeded, result: " + result);
+//                        } catch (Exception e) {
+//                            Log.i("HttpRequest: ", "Decode failed.");
+//                        }
+//
+//
+//                    }
+//                });
+//            }
+//        });
 
     }
 
