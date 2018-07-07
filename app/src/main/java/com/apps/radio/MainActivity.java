@@ -42,6 +42,9 @@ public class MainActivity extends BaseActivity {
         //隐藏底部导航栏
         //this.hideSystemBottomNavigationBar();
 
+        //修改Status Bar颜色
+        this.setWindowStatusBarColor(this, R.color.statusBarBg);
+
         //自定义Title Bar
         initActionBar();
 
