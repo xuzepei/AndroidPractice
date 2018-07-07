@@ -3,13 +3,23 @@ package com.apps.radio;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
-    private TextView mTextMessage;
+    private ViewPager viewPager;
+    private RCFragmentPagerAdapter fragmentPagerAdapter;
+//    private RCPagerAdapter pagerAdapter;
+//    private ArrayList<View> viewList;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -18,16 +28,24 @@ public class MainActivity extends BaseActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.tab_categories:
-                    Log.d("0", "clicked home button");
+                    Log.i("0", "clicked categories button");
+                    viewPager.setCurrentItem(0);
+                    updateTitle(R.string.title_0);
                     return true;
                 case R.id.tab_favorites:
-                    Log.d("0", "clicked home button");
+                    Log.i("0", "clicked favorites button");
+                    viewPager.setCurrentItem(1);
+                    updateTitle(R.string.tab_1);
                     return true;
                 case R.id.tab_courses:
-                    Log.d("0", "clicked dashboard button");
+                    Log.i("0", "clicked courses button");
+                    viewPager.setCurrentItem(2);
+                    updateTitle(R.string.tab_2);
                     return true;
                 case R.id.tab_more:
-                    Log.d("0", "clicked notification button");
+                    Log.i("0", "clicked more button");
+                    viewPager.setCurrentItem(3);
+                    updateTitle(R.string.tab_3);
                     return true;
             }
             return false;
@@ -47,14 +65,112 @@ public class MainActivity extends BaseActivity {
 
         //自定义Title Bar
         initActionBar();
+        updateTitle(getResources().getString(R.string.title_0));
 
         //取消Tab Bar的shift mode
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
 
-        //mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        //ViewPager
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                Log.i("onPageSelected", "position:" + position);
+
+                BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
+                switch (position)
+                {
+                    case 0:
+                        bottomNavigationView.setSelectedItemId(R.id.tab_categories);
+                        break;
+                    case 1:
+                        bottomNavigationView.setSelectedItemId(R.id.tab_favorites);
+                        break;
+                    case 2:
+                        bottomNavigationView.setSelectedItemId(R.id.tab_courses);
+                        break;
+                    case 3:
+                        bottomNavigationView.setSelectedItemId(R.id.tab_more);
+                        break;
+
+                }
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
+        //Set adapter for view pager
+        //setupViewPager(viewPager);
+
+        fragmentPagerAdapter = new RCFragmentPagerAdapter(getSupportFragmentManager());
+        fragmentPagerAdapter.addFragment(new CategoryFragment());
+        fragmentPagerAdapter.addFragment(new FavoriteFragment());
+        fragmentPagerAdapter.addFragment(new CourseFragment());
+        fragmentPagerAdapter.addFragment(new MoreFragment());
+        viewPager.setAdapter(fragmentPagerAdapter);
+
+
     }
+
+//    private void setupViewPager(ViewPager viewPager) {
+//
+//        viewList = new ArrayList<View>();
+//        LayoutInflater li = getLayoutInflater();
+//        viewList.add(li.inflate(R.layout.pageview0,null,false));
+//        viewList.add(li.inflate(R.layout.pageview1,null,false));
+//        viewList.add(li.inflate(R.layout.pageview2,null,false));
+//        viewList.add(li.inflate(R.layout.pageview3,null,false));
+//        pagerAdapter = new RCPagerAdapter(viewList);
+//        viewPager.setAdapter(pagerAdapter);
+//    }
+
+    public void initActionBar() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        setSupportActionBar(toolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null){
+            //actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
+        }
+
+        // Set the padding to match the Status Bar height 可以换成任何View组件
+        //toolbar.setPadding(0, getStatusBarHeight(), 0, 0);
+
+        //toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    public void updateTitle(String title) {
+        TextView textView = (TextView) findViewById(R.id.toolbar_title);
+        textView.setText(title);
+    }
+
+    public void updateTitle(int resID) {
+        TextView textView = (TextView) findViewById(R.id.toolbar_title);
+        textView.setText(resID);
+    }
+
+
+
 
 }
