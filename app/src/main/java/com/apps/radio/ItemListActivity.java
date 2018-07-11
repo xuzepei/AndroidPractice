@@ -1,13 +1,17 @@
 package com.apps.radio;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.LinkedList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -25,6 +29,9 @@ public class ItemListActivity extends BaseActivity {
     private String title = null;
     private int page = 1;
 
+    private ListView listView;
+    private LinkedList<Item> items;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +45,8 @@ public class ItemListActivity extends BaseActivity {
 
         //加载数据
         updateContent();
+
+        initListView();
     }
 
     public void initActionBar() {
@@ -68,6 +77,27 @@ public class ItemListActivity extends BaseActivity {
     public void updateTitle(String title) {
         TextView textView = (TextView) findViewById(R.id.toolbar_title);
         textView.setText(title);
+    }
+
+    public void initListView() {
+        listView = (ListView) findViewById(R.id.item_list);
+        if(listView != null) {
+            if (items == null) {
+                items = new LinkedList<Item>();
+                items.add(new Item("1", "item0", "desc", "imageurl", "3fsdfs", "mp3url", "url", "", "mytext", "id0"));
+                items.add(new Item("2", "item0", "desc", "imageurl", "3fsdfs", "mp3url", "url", "", "mytext2", "id1"));
+            }
+
+            listView.setAdapter(new ItemListAdapter(items, this));
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    Log.v("ItemListActivity","clicked list item:" + i);
+                }
+            });
+        }
     }
 
     public void updateContent() {

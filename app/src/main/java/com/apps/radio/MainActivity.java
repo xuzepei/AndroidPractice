@@ -141,12 +141,14 @@ public class MainActivity extends BaseActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setSupportActionBar(toolbar);
+        //隐藏toolbar原来的title
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null){
             //actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setDisplayShowTitleEnabled(false);
         }
+
+        //下列语句，需要写在setSupportActionBar(toolbar)后
 
         // Set the padding to match the Status Bar height 可以换成任何View组件
         //toolbar.setPadding(0, getStatusBarHeight(), 0, 0);

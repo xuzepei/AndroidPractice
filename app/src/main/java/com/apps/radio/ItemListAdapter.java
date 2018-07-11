@@ -14,12 +14,12 @@ import java.util.LinkedList;
  * Created by xuzepei on 2018/2/9.
  */
 
-public class CategoryListAdapter extends BaseAdapter {
+public class ItemListAdapter extends BaseAdapter {
 
-    private LinkedList<Category> items;
+    private LinkedList<Item> items;
     private Context context;
 
-    public CategoryListAdapter(LinkedList<Category> items, Context context) {
+    public ItemListAdapter(LinkedList<Item> items, Context context) {
         this.items = items;
         this.context = context;
     }
@@ -41,13 +41,13 @@ public class CategoryListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = LayoutInflater.from(context).inflate(R.layout.cell_categorylist,parent,false);
+        convertView = LayoutInflater.from(context).inflate(R.layout.cell_itemlist,parent,false);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.item_imageview);
         TextView titleView = (TextView) convertView.findViewById(R.id.item_title);
         TextView subtitleView = (TextView) convertView.findViewById(R.id.cate_subtitle);
-        imageView.setImageResource(items.get(position).getImageResID());
+        //imageView.setImageResource(items.get(position).getImageResID());
         titleView.setText(items.get(position).getTitle());
-        subtitleView.setText(items.get(position).getSubtitle());
+        //subtitleView.setText(items.get(position).getSubtitle());
         return convertView;
     }
 
