@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_label_toast">Toast</string>
+    <string name="button_label_count">Count</string>
+    <string name="count_initial_value">0</string>
+    <string name="toast_message">Hello Toast!</string>
+    <string name="middle_line"></string>
+</resources>
