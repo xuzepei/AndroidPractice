@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/holo_purple" /> <!-- Set your desired button color here -->
+    <corners android:radius="0dp" /> <!-- Set the corner radius to 0dp to remove rounded corners -->
+</shape>
