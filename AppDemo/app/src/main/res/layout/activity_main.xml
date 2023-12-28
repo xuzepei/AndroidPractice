@@ -5,35 +5,42 @@
     android:id="@+id/MyLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/button_toast"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
+        android:layout_below="@+id/toolbar"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
         android:onClick="showToast"
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/show_count"
-        android:layout_below="@+id/button_toast"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="12dp"
+        android:layout_below="@+id/button_toast"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="4dp"
         android:background="#FFEB3B"
         android:text="@string/count_initial_value"
         android:textAlignment="center"
@@ -43,18 +50,48 @@
 
     <Button
         android:id="@+id/button_count"
-        android:layout_below="@+id/show_count"
-        android:layout_centerHorizontal="true"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginEnd="8dp"
+        android:layout_below="@+id/show_count"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp"
         android:onClick="countUp"
         android:text="@string/button_label_count"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:onClick="startNewActivity"
+        android:text="Button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_above="@+id/next_button"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/testpng" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        app:riv_corner_radius="20dp"
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="133dp"
+        android:src="@drawable/ic_launcher_background" />
 
 </RelativeLayout>

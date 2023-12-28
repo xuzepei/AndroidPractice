@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         countTV = (TextView) findViewById(R.id.show_count);
         countTV.setMaxLines(1);
         countTV.setEllipsize(TextUtils.TruncateAt.END);
