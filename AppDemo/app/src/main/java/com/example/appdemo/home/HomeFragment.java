@@ -1,13 +1,18 @@
 package com.example.appdemo.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.example.appdemo.LoginActivity;
 import com.example.appdemo.R;
 
 /**
@@ -61,6 +66,35 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        Button button1 = view.findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("####", "onClick: " + view.getClass().getSimpleName());
+
+                Intent intent = new Intent(requireContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button2 = view.findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onButton2Click(view);
+            }
+        });
+
+        return view;
+    }
+
+    public void onButton2Click(View view) {
+
+        // Handle button click here
+        Toast.makeText(requireContext(), "Button Clicked in Fragment!", Toast.LENGTH_SHORT).show();
+
+        Log.d("####", "onButton2Click: " + view.getClass().getSimpleName());
     }
 }

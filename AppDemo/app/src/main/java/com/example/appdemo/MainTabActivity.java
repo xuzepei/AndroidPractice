@@ -1,5 +1,6 @@
 package com.example.appdemo;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +18,7 @@ import com.example.appdemo.home.HomeFragment;
 import com.example.appdemo.notification.NotificationFragment;
 import com.example.appdemo.workspace.WorkspaceFragment;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainTabActivity extends AppCompatActivity {
 
     int tintColor = 0;
     HomeFragment homeFragment=new HomeFragment();
@@ -27,10 +28,14 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_main_tab);
         tintColor = ContextCompat.getColor(this, R.color.colorPrimary);
 
+        //选中tab home
         onTabItemClick(findViewById(R.id.text_home));
+
+        //先弹出登录框
+        showLoginActivity();
     }
 
     public void onTabItemClick(View v) {
@@ -87,6 +92,11 @@ public class MainActivity2 extends AppCompatActivity {
         setTabItemState(tv0, tintDrawable(originalDrawable0, default_color), default_color);
         setTabItemState(tv1, tintDrawable(originalDrawable1, default_color), default_color);
         setTabItemState(tv2, tintDrawable(originalDrawable2, default_color), default_color);
+    }
+
+    void showLoginActivity() {
+        Intent intent = new Intent(MainTabActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 
 }
