@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".RegisterByPhoneNumberFragment"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/phone_number_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@color/transparent"
+            android:paddingBottom="4dp"
+            android:drawableLeft="@drawable/cellphone"
+            android:drawablePadding="8dp"
+            android:hint="@string/phone_number_enter_hint"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/underlineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/phone_number_edit"
+            android:background="@drawable/underline" />
+
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_number_edit"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/password2"
+            android:drawablePadding="8dp"
+            android:hint="@string/password_enter_hint"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/underlineView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/password_edit"
+            android:background="@drawable/underline" />
+
+        <LinearLayout
+            android:id="@+id/verification_area"
+            android:layout_below="@id/password_edit"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_round_corner_frame2"
+                android:hint="@string/verification_code_hint"
+                android:minHeight="40dp"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:layout_weight="3"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_captcha"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/captcha_btn"
+                style="@style/Theme.AppCompat.DayNight"
+                android:background="@drawable/captcha_button_click_effect"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/verification_area"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_click_effect"
+            android:text="@string/register_title"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/password_edit"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorPrimary" />
+
+        <View
+            android:id="@+id/loading_blocker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

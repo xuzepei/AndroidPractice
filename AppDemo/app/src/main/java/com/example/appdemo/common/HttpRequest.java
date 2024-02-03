@@ -5,6 +5,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.example.appdemo.Tool;
+import com.example.appdemo.data.User;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +43,7 @@ public class HttpRequest {
 
         mCallback = callback;
 
-        Log.d("Request","Post: " + url);
+        Log.d("Request","POST: " + url);
         OkHttpClient client = new OkHttpClient();
         if(jsonObject != null){
             String jsonString = jsonObject.toString();
@@ -56,6 +57,8 @@ public class HttpRequest {
                         .url(url)
                         .post(requestBody)
                         .addHeader("Content-Type", "application/json")
+                        .addHeader("Accept", "application/json")
+                        .addHeader("Authorization", User.shared().authorization())
                         .build();
 
                 Call call = client.newCall(request);
@@ -100,4 +103,65 @@ public class HttpRequest {
 
         return true;
     }
+
+    public boolean get(String url, HttpCallback callback) throws IOException {
+
+        if(url.length() == 0 || isRequesting == true) {
+            return false;
+        }
+
+        mCallback = callback;
+
+        Log.d("Request","GET: " + url);
+        OkHttpClient client = new OkHttpClient();
+        // Build the request
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Accept", "*/*")
+                .addHeader("Authorization", User.shared().authorization())
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                Log.e("Request", "onFailure:", e);
+
+                if(mCallback != null) {
+                    mCallback.onFailure("");
+                }
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+
+                Log.d("Request","onResponse-StatusCode: " + response.code());
+                if(response.isSuccessful()){
+                    if(mCallback != null) {
+                        ResponseBody responseBody = response.body();
+                        if (responseBody != null) {
+                            // Convert the response body to a string
+                            String responseString = responseBody.string();
+
+                            // Print the response body
+                            Log.d("Request","onResponse-ResponseString: " + responseString);
+
+                            mCallback.onSuccess(responseString);
+                        }
+
+                        return;
+                    }
+                }
+
+                if(mCallback != null) {
+                    mCallback.onFailure("");
+                }
+            }
+        });
+
+        return true;
+    }
+
+
 }

@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.appdemo.home.HomeFragment;
 import com.example.appdemo.notification.NotificationFragment;
 import com.example.appdemo.workspace.WorkspaceFragment;
+import com.tencent.mmkv.MMKV;
 
 public class MainTabActivity extends AppCompatActivity {
 
@@ -28,6 +29,10 @@ public class MainTabActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        String rootDir = MMKV.initialize(this);
+        Log.d("####", "MMKV root: " + rootDir);
+
         setContentView(R.layout.activity_main_tab);
         tintColor = ContextCompat.getColor(this, R.color.colorPrimary);
 

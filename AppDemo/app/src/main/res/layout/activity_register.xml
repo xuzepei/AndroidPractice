@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/navigationbar_layout"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navigation_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<!--            <include-->
+<!--                android:id="@+id/segmented_control"-->
+<!--                layout="@layout/segmented_control_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="44dp" />-->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/register_title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/register_subtitle"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                style="@style/TabLayoutStyle"
+                app:tabTextAppearance="@style/TabItemTextStyle"
+                app:tabSelectedTextColor="@color/black"
+                app:tabMode="fixed">
+
+<!--                <com.google.android.material.tabs.TabItem-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:text="Phone Number" />-->
+
+<!--                <com.google.android.material.tabs.TabItem-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:text="Email"-->
+<!--                    />-->
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
