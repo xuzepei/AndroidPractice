@@ -40,7 +40,7 @@ public class MainTabActivity extends AppCompatActivity {
         onTabItemClick(findViewById(R.id.text_home));
 
         //先弹出登录框
-        showLoginActivity();
+        //showLoginActivity();
     }
 
     public void onTabItemClick(View v) {
