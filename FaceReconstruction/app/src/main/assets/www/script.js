@@ -16,10 +16,11 @@ directionalLight.position.set(1, 1, 1).normalize();
 scene.add(directionalLight);
 
 var path = "file:///android_asset/www/models/"
+var name = "aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X3BuZy9rT1ROa2ljNWdWQkhvb2FGb3FzeW9pY2NKRElLTHhsNnBYaWJKNWFyVzRRUllEcnJ3UHV1bVdleWljaWFKVjhJbFJTUWp1aWFqdFFOUjVGRE15ekhFYXJwN243US82NDA_0_hrn_mid_mesh"
 // Load MTL and OBJ files
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setPath(path);
-mtlLoader.load('face.obj.mtl', function (materials) {
+mtlLoader.load(name + '.mtl', function (materials) {
 
   console.log(materials);
 
@@ -28,7 +29,7 @@ mtlLoader.load('face.obj.mtl', function (materials) {
   var objLoader = new THREE.OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.setPath(path);
-  objLoader.load('face.obj', function (object) {
+  objLoader.load(name + '.obj', function (object) {
     scene.add(object);
 
     animate();
