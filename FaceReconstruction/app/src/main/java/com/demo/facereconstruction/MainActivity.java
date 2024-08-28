@@ -4,11 +4,14 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.webkit.ValueCallback;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.webkit.WebViewAssetLoader;
@@ -25,7 +28,7 @@ import org.rajawali3d.view.SurfaceView;
 
 public class MainActivity extends AppCompatActivity {
 
-    MyRenderer mRenderer = null;
+    Button actionButton = null;
     WebView webView = null;
 
     private SceneView sceneView;
@@ -35,15 +38,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        SurfaceView surface = new SurfaceView(this);
-//        surface.setFrameRate(60.0);
-//        surface.setRenderMode(ISurface.RENDERMODE_WHEN_DIRTY);
-//        setContentView(surface);
-//
-//        mRenderer = new MyRenderer(this);
-//        surface.setSurfaceRenderer(mRenderer);
-
+        actionButton = findViewById(R.id.button);
         sceneView = findViewById(R.id.scene_view);
+
+        actionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("####", "Clicked action button.");
+                loadModel();
+            }
+        });
+
         //获得控件
         webView = findViewById(R.id.webview);
         if(webView != null) {
@@ -86,49 +91,30 @@ public class MainActivity extends AppCompatActivity {
         }
 
         loadScene();
-        //loadModel();
     }
 
     void loadScene() {
         webView.loadUrl("file:///android_asset/www/index.html");
-        //loadModel();
     }
 
-//    void loadModel() {
-//        String action = "javascript:loadModel('file:///android_asset/www/index.html/models/','PEACE_LILLY_5K')";
-//        webView.loadUrl(action);
-//    }
-
     void loadModel() {
-        Uri modelUri = Uri.parse("file:///android_asset/20190618124505345_0_hrn_mid_mesh.obj");
+        String path = "file:///android_asset/www/models/";
+        String filename = "aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X3BuZy9rT1ROa2ljNWdWQkhvb2FGb3FzeW9pY2NKRElLTHhsNnBYaWJKNWFyVzRRUllEcnJ3UHV1bVdleWljaWFKVjhJbFJTUWp1aWFqdFFOUjVGRE15ekhFYXJwN243US82NDA_0_hrn_mid_mesh";
+        //String action = "javascript:loadModel(" + path + "," +filename+")";
 
-//        RenderableSource renderableSource = RenderableSource.builder()
-//                .setSource(this, modelUri, RenderableSource.SourceType)
-//                .setScale(0.5f)  // Adjust the scale of the model if necessary
-//                .setRecenterMode(RenderableSource.RecenterMode.ROOT)
-//                .build();
+        String action = "javascript:loadModel(" + "\"" + path + "\",\"" +filename+"\""+")";
+        Log.d("####", action);
+        webView.evaluateJavascript(action, new ValueCallback<String>() {
+            @Override
+            public void onReceiveValue(String value) {
+                // Handle the result here
+                Log.d("#### WebView", "Result from JS: " + value);
+            }
+        });
+    }
 
-        ModelRenderable.builder()
-                .setSource(this, modelUri)
-                .setRegistryId("model")
-                .build()
-                .thenAccept(modelRenderable -> {
-                    // Create a node for the model
-                    com.google.ar.sceneform.Node modelNode = new com.google.ar.sceneform.Node();
-                    modelNode.setRenderable(modelRenderable);
+    public void callJavaScriptMethodWithResult() {
 
-                    // Optionally set the position of the model
-                    modelNode.setLocalPosition(new Vector3(0f, 0f, -1f)); // Adjust the position as needed
-
-                    // Add the node to the scene
-                    Scene scene = sceneView.getScene();
-                    scene.addChild(modelNode);
-                })
-                .exceptionally(throwable -> {
-                    // Handle any errors during model loading
-                    throwable.printStackTrace();
-                    return null;
-                });
     }
 
     @Override
