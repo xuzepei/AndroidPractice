@@ -16,36 +16,47 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.webkit.WebViewAssetLoader;
 
-import com.google.ar.sceneform.Scene;
-import com.google.ar.sceneform.SceneView;
-//import com.google.ar.sceneform.assets.RenderableSource;
-import com.google.ar.sceneform.math.Vector3;
-import com.google.ar.sceneform.rendering.ModelRenderable;
+import org.json.JSONObject;
 
-import org.rajawali3d.view.ISurface;
-import org.rajawali3d.view.SurfaceView;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    Button downloadButton = null;
     Button actionButton = null;
     WebView webView = null;
 
-    private SceneView sceneView;
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        actionButton = findViewById(R.id.button);
-        sceneView = findViewById(R.id.scene_view);
+        downloadButton = findViewById(R.id.download_btn);
+        actionButton = findViewById(R.id.action_btn);
+
+        downloadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("####", "Clicked download button.");
+                downloadModel();
+            }
+        });
 
         actionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("####", "Clicked action button.");
-                loadModel();
+                String filename = "20190618124505345_0_hrn_mid_mesh";
+                //loadModel(filename);
             }
         });
 
@@ -97,11 +108,12 @@ public class MainActivity extends AppCompatActivity {
         webView.loadUrl("file:///android_asset/www/index.html");
     }
 
-    void loadModel() {
-        String path = "file:///android_asset/www/models/";
-        String filename = "aHR0cHM6Ly9tbWJpei5xcGljLmNuL3N6X21tYml6X3BuZy9rT1ROa2ljNWdWQkhvb2FGb3FzeW9pY2NKRElLTHhsNnBYaWJKNWFyVzRRUllEcnJ3UHV1bVdleWljaWFKVjhJbFJTUWp1aWFqdFFOUjVGRE15ekhFYXJwN243US82NDA_0_hrn_mid_mesh";
-        //String action = "javascript:loadModel(" + path + "," +filename+")";
+    void loadModel(String folderName, String filename) {
+        //String path = "file:///android_asset/www/models/";
+        //String path = "file:///storage/emulated/0/Android/data/com.demo.facereconstruction/files/models/";
+        String path = "file://" + Tool.localModelDirectory() + "/" + folderName + "/";
 
+        //String action = "javascript:loadModel(" + path + "," +filename+")";
         String action = "javascript:loadModel(" + "\"" + path + "\",\"" +filename+"\""+")";
         Log.d("####", action);
         webView.evaluateJavascript(action, new ValueCallback<String>() {
@@ -113,16 +125,66 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void callJavaScriptMethodWithResult() {
+    void downloadModel() {
+        String urlString = "https://xuzepei.github.io/vue/test.zip";
+
+        HttpRequest.shared().downloadModel(urlString, "test", new HttpCallbackWithToken() {
+            @Override
+            public void onFailure(String error, String token) {
+                Log.d("####", "downloadFile failed: " + error);
+            }
+
+            @Override
+            public void onSuccess(Object data, JSONObject token) {
+                Log.d("####", "downloadFile succeeded");
+            }
+
+            public void onSuccess(String token) {
+                Log.d("####", "downloadFile succeeded, token: " + token);
+                handleSucceed(token);
+            }
+        });
 
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (sceneView != null) {
-            sceneView.destroy();
+    void handleSucceed(String token) {
+        runOnUiThread(new Runnable() {
+            public void run() {
+                if(!Tool.isNullOrEmpty(token)) {
+                    String modelFilename = unzipModelFile(token);
+                    if(!Tool.isNullOrEmpty(modelFilename)) {
+                        loadModel(token, modelFilename);
+                    }
+                }
+            }
+        });
+    }
+
+    public String unzipModelFile(String modelId) {
+        try {
+            File destinationDirectory = new File(Tool.localModelDirectory(), modelId);
+            Tool.deleteDirectory(destinationDirectory);
+
+            List<String> filePaths = ZipUtils.unzip(Tool.getLocalModelZip(modelId), destinationDirectory);
+            // 解压完成
+            for (String path : filePaths) {
+                Log.d("####", "Unzipped Filepath: " + path);
+                if(path.toLowerCase().endsWith(".obj")) {
+                    String folderName = "/";
+                    int index = path.lastIndexOf(folderName);
+                    if(index > 0) {
+                        String fileName = path.substring(index + folderName.length(), path.length() - 4);
+                        Log.d("####", "Model filename: " + fileName);
+                        return fileName;
+                    }
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+        return "";
     }
 
 

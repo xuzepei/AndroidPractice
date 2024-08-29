@@ -2,6 +2,15 @@
 <html>
 <head>
     <title>Three.js Example</title>
+    <style>
+        body {
+            font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple WebExp Icons Custom", "Apple Legacy Chevron", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            color: black;
+        }
+    </style>
     <script type="text/javascript">
         function test(path, name) {
             return "path: " + path;
@@ -10,13 +19,17 @@
 </head>
 <body>
 
-<!-- Include Three.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<!-- Include MTLLoader -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
-<!-- Include OBJLoader -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="script.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>-->
+<!-- <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>-->
+<!-- <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>-->
+<!-- <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>-->
+
+<script src="three.min.js"></script>
+<script src="MTLLoader.js"></script>
+<script src="OBJLoader.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="3d_face.js"></script>
+
 </body>
 </html>

@@ -21,23 +21,21 @@
                 android:layout_height="wrap_content"
                 android:text="Three.js"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
-
+                android:textStyle="bold"
+                android:visibility="gone"/>
             <Button
-                android:id="@+id/button"
+                android:id="@+id/download_btn"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download model"/>
+            <Button
+                android:id="@+id/action_btn"
+                android:layout_margin="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Call JS"/>
-        </LinearLayout>>
-
-
-
-
-        <com.google.ar.sceneform.SceneView
-            android:id="@+id/scene_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"/>
+        </LinearLayout>
 
         <WebView
             android:id="@+id/webview"
