@@ -91,6 +91,9 @@ scene.add(directionalLight);
 
 // 创建OrbitControls来控制模型旋转
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
+// 设置缩放限制
+controls.minDistance = 1; // 最小距离
+controls.maxDistance = 10; // 最大距离
 // 如果OrbitControls改变了相机参数，重新调用渲染器渲染三维场景
 controls.addEventListener('change', function () {
     renderer.render(scene, camera); //执行渲染操作
