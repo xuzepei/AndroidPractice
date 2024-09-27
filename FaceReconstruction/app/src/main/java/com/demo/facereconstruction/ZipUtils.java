@@ -52,7 +52,9 @@ public class ZipUtils {
 
     // Utility method to create new file, handling potential security issues
     public static File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
-        File destFile = new File(destinationDir, zipEntry.getName());
+
+        String filename = new File(zipEntry.getName()).getName();
+        File destFile = new File(destinationDir, filename);
 
         String destDirPath = destinationDir.getCanonicalPath();
         String destFilePath = destFile.getCanonicalPath();
