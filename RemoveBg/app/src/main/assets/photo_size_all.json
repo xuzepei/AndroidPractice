@@ -1,0 +1,2690 @@
+[
+    {
+        "category": "Passport",
+        "country": "Afghanistan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AF"
+    },
+    {
+        "category": "Passport",
+        "country": "Åland Islands",
+        "unit": "mm",
+        "size_width": "36",
+        "size_height": "47",
+        "region_code": "AX"
+    },
+    {
+        "category": "Passport",
+        "country": "Albania",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AL"
+    },
+    {
+        "category": "Passport",
+        "country": "Algeria",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "DZ"
+    },
+    {
+        "category": "Passport",
+        "country": "American Samoa",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "AS"
+    },
+    {
+        "category": "Passport",
+        "country": "Andorra",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "40",
+        "region_code": "AD"
+    },
+    {
+        "category": "Passport",
+        "country": "Angola",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "AO"
+    },
+    {
+        "category": "Passport",
+        "country": "Anguilla",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AI"
+    },
+    {
+        "category": "Passport",
+        "country": "Antarctica",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "AQ"
+    },
+    {
+        "category": "Passport",
+        "country": "Antigua & Barbuda",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "AG"
+    },
+    {
+        "category": "Passport",
+        "country": "Argentina",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "AR"
+    },
+    {
+        "category": "DNI",
+        "country": "Argentina",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "AR"
+    },
+    {
+        "category": "Visa",
+        "country": "Argentina",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "AR"
+    },
+    {
+        "category": "Visa in USA",
+        "country": "Argentina",
+        "unit": "in",
+        "size_width": "1.5",
+        "size_height": "1.5",
+        "region_code": "AR"
+    },
+    {
+        "category": "Passport",
+        "country": "Armenia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AM"
+    },
+    {
+        "category": "Passport",
+        "country": "Aruba",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AW"
+    },
+    {
+        "category": "Passport",
+        "country": "Ascension Island",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AC"
+    },
+    {
+        "category": "Passport",
+        "country": "Australia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AU"
+    },
+    {
+        "category": "Visa",
+        "country": "Australia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AU"
+    },
+    {
+        "category": "Baby Passport",
+        "country": "Australia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AU"
+    },
+    {
+        "category": "Proof of Age Card",
+        "country": "Australia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AU"
+    },
+    {
+        "category": "Queensland Driving Licence",
+        "country": "Australia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AU"
+    },
+    {
+        "category": "Passport",
+        "country": "Austria",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AT"
+    },
+    {
+        "category": "Passport",
+        "country": "Azerbaijan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "AZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Bahamas",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "BS"
+    },
+    {
+        "category": "Passport",
+        "country": "Bahrain",
+        "unit": "mm",
+        "size_width": "43",
+        "size_height": "55",
+        "region_code": "BH"
+    },
+    {
+        "category": "Passport",
+        "country": "Bangladesh",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BD"
+    },
+    {
+        "category": "Passport",
+        "country": "Barbados",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "BB"
+    },
+    {
+        "category": "Passport",
+        "country": "Belarus",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BY"
+    },
+    {
+        "category": "Passport",
+        "country": "Belgium",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BE"
+    },
+    {
+        "category": "Passport",
+        "country": "Belize",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "BZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Benin",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BJ"
+    },
+    {
+        "category": "Passport",
+        "country": "Bermuda",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BM"
+    },
+    {
+        "category": "Passport",
+        "country": "Bhutan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BT"
+    },
+    {
+        "category": "Passport",
+        "country": "Bolivia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "BO"
+    },
+    {
+        "category": "Passport",
+        "country": "Bosnia & Herzegovina",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BA"
+    },
+    {
+        "category": "Passport",
+        "country": "Botswana",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BW"
+    },
+    {
+        "category": "Passport",
+        "country": "Brazil",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "70",
+        "region_code": "BR"
+    },
+    {
+        "category": "Passport Online",
+        "country": "Brazil",
+        "unit": "px",
+        "size_width": "431",
+        "size_height": "531",
+        "region_code": "BR"
+    },
+    {
+        "category": "Visa Online",
+        "country": "Brazil",
+        "unit": "px",
+        "size_width": "431",
+        "size_height": "531",
+        "region_code": "BR"
+    },
+    {
+        "category": "ID Card",
+        "country": "Brazil",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "BR"
+    },
+    {
+        "category": "Passport",
+        "country": "British Virgin Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "VG"
+    },
+    {
+        "category": "Passport",
+        "country": "Brunei",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BN"
+    },
+    {
+        "category": "Passport",
+        "country": "Bulgaria",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BG"
+    },
+    {
+        "category": "Passport",
+        "country": "Burkina Faso",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BF"
+    },
+    {
+        "category": "Passport",
+        "country": "Burundi",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "40",
+        "region_code": "BI"
+    },
+    {
+        "category": "Passport",
+        "country": "Cambodia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "KH"
+    },
+    {
+        "category": "Passport",
+        "country": "Cameroon",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "45",
+        "region_code": "CM"
+    },
+    {
+        "category": "Passport",
+        "country": "Canada",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "70",
+        "region_code": "CA"
+    },
+    {
+        "category": "Citizenship",
+        "country": "Canada",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "70",
+        "region_code": "CA"
+    },
+    {
+        "category": "Firearms License",
+        "country": "Canada",
+        "unit": "mm",
+        "size_width": "45",
+        "size_height": "57",
+        "region_code": "CA"
+    },
+    {
+        "category": "Permanent Resident Card",
+        "country": "Canada",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "70",
+        "region_code": "CA"
+    },
+    {
+        "category": "Visa",
+        "country": "Canada",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CA"
+    },
+    {
+        "category": "Passport",
+        "country": "Cayman Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "KY"
+    },
+    {
+        "category": "Passport",
+        "country": "Cape Verde",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CV"
+    },
+    {
+        "category": "Passport",
+        "country": "Caribbean Netherlands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BQ"
+    },
+    {
+        "category": "Passport",
+        "country": "Cayman Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "KY"
+    },
+    {
+        "category": "Passport",
+        "country": "Central African Republic",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "40",
+        "region_code": "CF"
+    },
+    {
+        "category": "Passport",
+        "country": "Ceuta & Melilla",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "EA"
+    },
+    {
+        "category": "Passport",
+        "country": "Chad",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TD"
+    },
+    {
+        "category": "Passport",
+        "country": "Chagos Archipelago",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IO"
+    },
+    {
+        "category": "Passport",
+        "country": "Chile",
+        "unit": "mm",
+        "size_width": "45",
+        "size_height": "45",
+        "region_code": "CL"
+    },
+    {
+        "category": "Driving Licence",
+        "country": "Chile",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "CL"
+    },
+    {
+        "category": "ID Card",
+        "country": "Chile",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "45",
+        "region_code": "CL"
+    },
+    {
+        "category": "Passport",
+        "country": "Mainland China",
+        "unit": "mm",
+        "size_width": "33",
+        "size_height": "48",
+        "region_code": "CN"
+    },
+    {
+        "category": "Passport",
+        "country": "Christmas Island",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CX"
+    },
+    {
+        "category": "Passport",
+        "country": "Clipperton Island",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CP"
+    },
+    {
+        "category": "Passport",
+        "country": "Cocos (Keeling) Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CC"
+    },
+    {
+        "category": "Passport",
+        "country": "Colombia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "CO"
+    },
+    {
+        "category": "Visa Online",
+        "country": "Colombia",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "CO"
+    },
+    {
+        "category": "Citizenship",
+        "country": "Colombia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "CO"
+    },
+    {
+        "category": "Passport",
+        "country": "Comoros",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "KM"
+    },
+    {
+        "category": "Passport",
+        "country": "Congo - Brazzaville",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "CG"
+    },
+    {
+        "category": "Passport",
+        "country": "Congo - Kinshasa",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "CD"
+    },
+    {
+        "category": "Passport",
+        "country": "Cook Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CK"
+    },
+    {
+        "category": "Passport",
+        "country": "Costa Rica",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "CR"
+    },
+    {
+        "category": "Passport",
+        "country": "Côte d’Ivoire",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "CI"
+    },
+    {
+        "category": "Passport",
+        "country": "Croatia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "HR"
+    },
+    {
+        "category": "Passport",
+        "country": "Cuba",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "CU"
+    },
+    {
+        "category": "Passport",
+        "country": "Curaçao",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CW"
+    },
+    {
+        "category": "Passport",
+        "country": "Cyprus",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CY"
+    },
+    {
+        "category": "Passport",
+        "country": "Czechia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Denmark",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "DK"
+    },
+    {
+        "category": "Passport",
+        "country": "Diego Garcia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "DG"
+    },
+    {
+        "category": "Passport",
+        "country": "Djibouti",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "DJ"
+    },
+    {
+        "category": "Passport",
+        "country": "Dominica",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "DM"
+    },
+    {
+        "category": "Passport",
+        "country": "Dominican Republic",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "DO"
+    },
+    {
+        "category": "Passport",
+        "country": "Ecuador",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "EC"
+    },
+    {
+        "category": "Passport",
+        "country": "Egypt",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "EG"
+    },
+    {
+        "category": "Passport",
+        "country": "El Salvador",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "SV"
+    },
+    {
+        "category": "Passport",
+        "country": "Equatorial Guinea",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "GQ"
+    },
+    {
+        "category": "Passport",
+        "country": "Eritrea",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ER"
+    },
+    {
+        "category": "Passport",
+        "country": "Estonia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "EE"
+    },
+    {
+        "category": "Passport",
+        "country": "Eswatini",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Falkland Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "FK"
+    },
+    {
+        "category": "Passport",
+        "country": "Faroe Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "FO"
+    },
+    {
+        "category": "Passport",
+        "country": "Fiji",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "FJ"
+    },
+    {
+        "category": "Passport",
+        "country": "Finland",
+        "unit": "mm",
+        "size_width": "36",
+        "size_height": "47",
+        "region_code": "FI"
+    },
+    {
+        "category": "Passport",
+        "country": "France",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "FR"
+    },
+    {
+        "category": "Visa",
+        "country": "France",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "FR"
+    },
+    {
+        "category": "ID Card",
+        "country": "France",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "FR"
+    },
+    {
+        "category": "Driving Licence",
+        "country": "France",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "FR"
+    },
+    {
+        "category": "Passport",
+        "country": "French Guiana",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GF"
+    },
+    {
+        "category": "Passport",
+        "country": "French Polynesia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PF"
+    },
+    {
+        "category": "Passport",
+        "country": "French Southern Territories",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TF"
+    },
+    {
+        "category": "Passport",
+        "country": "Gabon",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "GA"
+    },
+    {
+        "category": "Passport",
+        "country": "Gambia",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "GM"
+    },
+    {
+        "category": "Passport",
+        "country": "Georgia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "GS"
+    },
+    {
+        "category": "Passport",
+        "country": "Germany",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "DE"
+    },
+    {
+        "category": "Passport",
+        "country": "Ghana",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "GH"
+    },
+    {
+        "category": "Passport",
+        "country": "Gibraltar",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GI"
+    },
+    {
+        "category": "Passport",
+        "country": "Greece",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "GR"
+    },
+    {
+        "category": "Passport",
+        "country": "Greenland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GL"
+    },
+    {
+        "category": "Passport",
+        "country": "Grenada",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "GD"
+    },
+    {
+        "category": "Passport",
+        "country": "Guadeloupe",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GP"
+    },
+    {
+        "category": "Passport",
+        "country": "Guam",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GU"
+    },
+    {
+        "category": "Passport",
+        "country": "Guatemala",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "GT"
+    },
+    {
+        "category": "Passport",
+        "country": "Guernsey",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GG"
+    },
+    {
+        "category": "Passport",
+        "country": "Guinea",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "GN"
+    },
+    {
+        "category": "Passport",
+        "country": "Guinea-Bissau",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "GW"
+    },
+    {
+        "category": "Passport",
+        "country": "Guyana",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GY"
+    },
+    {
+        "category": "Passport",
+        "country": "Haiti",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "HT"
+    },
+    {
+        "category": "Passport",
+        "country": "Heard & McDonald Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "HM"
+    },
+    {
+        "category": "Passport",
+        "country": "Honduras",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "HN"
+    },
+    {
+        "category": "Passport",
+        "country": "Hong Kong",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "HK"
+    },
+    {
+        "category": "Visa",
+        "country": "Hong Kong",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "HK"
+    },
+    {
+        "category": "E-Passport Online",
+        "country": "Hong Kong",
+        "unit": "px",
+        "size_width": "1200",
+        "size_height": "1600",
+        "region_code": "HK"
+    },
+    {
+        "category": "E-Visa Online",
+        "country": "Hong Kong",
+        "unit": "px",
+        "size_width": "1200",
+        "size_height": "1600",
+        "region_code": "HK"
+    },
+    {
+        "category": "Passport",
+        "country": "Hungary",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "HU"
+    },
+    {
+        "category": "Passport",
+        "country": "Iceland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IS"
+    },
+    {
+        "category": "Passport",
+        "country": "India",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "IN"
+    },
+    {
+        "category": "Visa",
+        "country": "India",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "IN"
+    },
+    {
+        "category": "OCI",
+        "country": "India",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "IN"
+    },
+    {
+        "category": "Passport",
+        "country": "Indonesia",
+        "unit": "mm",
+        "size_width": "51",
+        "size_height": "51",
+        "region_code": "ID"
+    },
+    {
+        "category": "Visa",
+        "country": "Indonesia",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "ID"
+    },
+    {
+        "category": "Passport",
+        "country": "Iran",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "IR"
+    },
+    {
+        "category": "Passport",
+        "country": "Iraq",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "IQ"
+    },
+    {
+        "category": "Passport",
+        "country": "Ireland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IE"
+    },
+    {
+        "category": "Driving Licence",
+        "country": "Ireland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IE"
+    },
+    {
+        "category": "Garda Age Card",
+        "country": "Ireland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IE"
+    },
+    {
+        "category": "Employment Permit Application",
+        "country": "Ireland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IE"
+    },
+    {
+        "category": "Passport Online",
+        "country": "Ireland",
+        "unit": "px",
+        "size_width": "715",
+        "size_height": "951",
+        "region_code": "IE"
+    },
+    {
+        "category": "Baby Passport",
+        "country": "Ireland",
+        "unit": "px",
+        "size_width": "715",
+        "size_height": "951",
+        "region_code": "IE"
+    },
+    {
+        "category": "Passport",
+        "country": "Isle of Man",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IM"
+    },
+    {
+        "category": "Passport",
+        "country": "Israel",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "IL"
+    },
+    {
+        "category": "Passport",
+        "country": "Italy",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "IT"
+    },
+    {
+        "category": "Passport",
+        "country": "Jamaica",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "JM"
+    },
+    {
+        "category": "Passport",
+        "country": "Japan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "JP"
+    },
+    {
+        "category": "Visa",
+        "country": "Japan",
+        "unit": "mm",
+        "size_width": "45",
+        "size_height": "45",
+        "region_code": "JP"
+    },
+    {
+        "category": "Residence Card",
+        "country": "Japan",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "JP"
+    },
+    {
+        "category": "APEC Business Traval Card",
+        "country": "Japan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "JP"
+    },
+    {
+        "category": "Passport",
+        "country": "Jersey",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "JE"
+    },
+    {
+        "category": "Passport",
+        "country": "Jordan",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "JO"
+    },
+    {
+        "category": "Passport",
+        "country": "Kazakhstan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "KZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Kenya",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "KE"
+    },
+    {
+        "category": "Passport",
+        "country": "Kiribati",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "KI"
+    },
+    {
+        "category": "Passport",
+        "country": "Kosovo",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "XK"
+    },
+    {
+        "category": "Passport",
+        "country": "Kuwait",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "KW"
+    },
+    {
+        "category": "Passport",
+        "country": "Kyrgyzstan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "KG"
+    },
+    {
+        "category": "Passport",
+        "country": "Laos",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "LA"
+    },
+    {
+        "category": "Passport",
+        "country": "Latvia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "LV"
+    },
+    {
+        "category": "Passport",
+        "country": "Lebanon",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "LB"
+    },
+    {
+        "category": "Passport",
+        "country": "Lesotho",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "LS"
+    },
+    {
+        "category": "Passport",
+        "country": "Liberia",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "LR"
+    },
+    {
+        "category": "Passport",
+        "country": "Libya",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "LY"
+    },
+    {
+        "category": "Passport",
+        "country": "Liechtenstein",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "LI"
+    },
+    {
+        "category": "Passport",
+        "country": "Lithuania",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "LT"
+    },
+    {
+        "category": "Passport",
+        "country": "Luxembourg",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "LU"
+    },
+    {
+        "category": "Passport",
+        "country": "Macao",
+        "unit": "in",
+        "size_width": "1.5",
+        "size_height": "2",
+        "region_code": "MO"
+    },
+    {
+        "category": "Passport",
+        "country": "Madagascar",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "MG"
+    },
+    {
+        "category": "Passport",
+        "country": "Malawi",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MW"
+    },
+    {
+        "category": "Passport",
+        "country": "Malaysia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "50",
+        "region_code": "MY"
+    },
+    {
+        "category": "E-Visa",
+        "country": "Malaysia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "50",
+        "region_code": "MY"
+    },
+    {
+        "category": "EMGS",
+        "country": "Malaysia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MY"
+    },
+    {
+        "category": "Passport",
+        "country": "Maldives",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MV"
+    },
+    {
+        "category": "Passport",
+        "country": "Mali",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "SO"
+    },
+    {
+        "category": "Passport",
+        "country": "Malta",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MT"
+    },
+    {
+        "category": "Passport",
+        "country": "Marshall Islands",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "MH"
+    },
+    {
+        "category": "Passport",
+        "country": "Martinique",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MQ"
+    },
+    {
+        "category": "Passport",
+        "country": "Mauritania",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MR"
+    },
+    {
+        "category": "Passport",
+        "country": "Mauritius",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MU"
+    },
+    {
+        "category": "Passport",
+        "country": "Mayotte",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "YT"
+    },
+    {
+        "category": "Passport",
+        "country": "Mexico",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MX"
+    },
+    {
+        "category": "Passport",
+        "country": "Micronesia",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "FM"
+    },
+    {
+        "category": "Passport",
+        "country": "Moldova",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MD"
+    },
+    {
+        "category": "Passport",
+        "country": "Monaco",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MC"
+    },
+    {
+        "category": "Passport",
+        "country": "Mongolia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MN"
+    },
+    {
+        "category": "Passport",
+        "country": "Montenegro",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ME"
+    },
+    {
+        "category": "Passport",
+        "country": "Montserrat",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MS"
+    },
+    {
+        "category": "Passport",
+        "country": "Morocco",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MA"
+    },
+    {
+        "category": "Passport",
+        "country": "Mozambique",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "MZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Myanmar (Burma)",
+        "unit": "mm",
+        "size_width": "38",
+        "size_height": "48",
+        "region_code": "MM"
+    },
+    {
+        "category": "Passport",
+        "country": "Namibia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NA"
+    },
+    {
+        "category": "Passport",
+        "country": "Nauru",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NR"
+    },
+    {
+        "category": "Passport",
+        "country": "Nepal",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NP"
+    },
+    {
+        "category": "Passport",
+        "country": "Netherlands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BQ"
+    },
+    {
+        "category": "Driving Licence",
+        "country": "Netherlands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BQ"
+    },
+    {
+        "category": "ID Card",
+        "country": "Netherlands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BQ"
+    },
+    {
+        "category": "Passport",
+        "country": "New Caledonia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NC"
+    },
+    {
+        "category": "Passport",
+        "country": "New Zealand",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NZ"
+    },
+    {
+        "category": "Visa",
+        "country": "New Zealand",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Nicaragua",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "NI"
+    },
+    {
+        "category": "Passport",
+        "country": "Niger",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "NE"
+    },
+    {
+        "category": "Passport",
+        "country": "Nigeria",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NG"
+    },
+    {
+        "category": "Passport",
+        "country": "Niue",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NU"
+    },
+    {
+        "category": "Passport",
+        "country": "Norfolk Island",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NF"
+    },
+    {
+        "category": "Passport",
+        "country": "North Macedonia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MK"
+    },
+    {
+        "category": "Passport",
+        "country": "Northern Mariana Islands",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "MP"
+    },
+    {
+        "category": "Passport",
+        "country": "Norway",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "NO"
+    },
+    {
+        "category": "Passport",
+        "country": "Oman",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "OM"
+    },
+    {
+        "category": "Passport",
+        "country": "Pakistan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PK"
+    },
+    {
+        "category": "Passport",
+        "country": "Palau",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "PW"
+    },
+    {
+        "category": "Passport",
+        "country": "Palestinian Territories",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "PS"
+    },
+    {
+        "category": "Passport",
+        "country": "Panama",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "PA"
+    },
+    {
+        "category": "Passport",
+        "country": "Papua New Guinea",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PG"
+    },
+    {
+        "category": "Passport",
+        "country": "Paraguay",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "PY"
+    },
+    {
+        "category": "Passport",
+        "country": "Peru",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "PE"
+    },
+    {
+        "category": "ID Card",
+        "country": "Peru",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PE"
+    },
+    {
+        "category": "Passport",
+        "country": "Philippines",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PH"
+    },
+    {
+        "category": "Machine-Readable Passport",
+        "country": "Philippines",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PH"
+    },
+    {
+        "category": "National ID",
+        "country": "Philippines",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PH"
+    },
+    {
+        "category": "PRC ID",
+        "country": "Philippines",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "PH"
+    },
+    {
+        "category": "Phihealth ID",
+        "country": "Philippines",
+        "unit": "in",
+        "size_width": "1",
+        "size_height": "1",
+        "region_code": "PH"
+    },
+    {
+        "category": "Driving License",
+        "country": "Philippines",
+        "unit": "in",
+        "size_width": "1",
+        "size_height": "1",
+        "region_code": "PH"
+    },
+    {
+        "category": "TIN ID",
+        "country": "Philippines",
+        "unit": "in",
+        "size_width": "1",
+        "size_height": "1",
+        "region_code": "PH"
+    },
+    {
+        "category": "RUSH ID",
+        "country": "Philippines",
+        "unit": "in",
+        "size_width": "1",
+        "size_height": "1",
+        "region_code": "PH"
+    },
+    {
+        "category": "CIR Card",
+        "country": "Philippines",
+        "unit": "mm",
+        "size_width": "25",
+        "size_height": "25",
+        "region_code": "PH"
+    },
+    {
+        "category": "Acknowledgment of Employment Contracts",
+        "country": "Philippines",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "PH"
+    },
+    {
+        "category": "Passport",
+        "country": "Pitcairn Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PN"
+    },
+    {
+        "category": "Passport",
+        "country": "Poland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PL"
+    },
+    {
+        "category": "Passport",
+        "country": "Portugal",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PT"
+    },
+    {
+        "category": "Passport",
+        "country": "Puerto Rico",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "PR"
+    },
+    {
+        "category": "Passport",
+        "country": "Qatar",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "QA"
+    },
+    {
+        "category": "Passport",
+        "country": "Réunion",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "RE"
+    },
+    {
+        "category": "Passport",
+        "country": "Romania",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "RO"
+    },
+    {
+        "category": "Passport",
+        "country": "Russia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "RU"
+    },
+    {
+        "category": "Visa",
+        "country": "Russia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "RU"
+    },
+    {
+        "category": "Work Permit",
+        "country": "Russia",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "RU"
+    },
+    {
+        "category": "Student ID",
+        "country": "Russia",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "RU"
+    },
+    {
+        "category": "Army ID",
+        "country": "Russia",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "RU"
+    },
+    {
+        "category": "Hunting License",
+        "country": "Russia",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "RU"
+    },
+    {
+        "category": "APEC Business Traval Card",
+        "country": "Russia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "RU"
+    },
+    {
+        "category": "Passport",
+        "country": "Rwanda",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "RW"
+    },
+    {
+        "category": "Passport",
+        "country": "Samoa",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "WS"
+    },
+    {
+        "category": "Passport",
+        "country": "San Marino",
+        "unit": "mm",
+        "size_width": "30",
+        "size_height": "40",
+        "region_code": "SM"
+    },
+    {
+        "category": "Passport",
+        "country": "São Tomé & Príncipe",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ST"
+    },
+    {
+        "category": "Passport",
+        "country": "Saudi Arabia",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "SA"
+    },
+    {
+        "category": "Passport",
+        "country": "Senegal",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "SN"
+    },
+    {
+        "category": "Passport",
+        "country": "Serbia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "RS"
+    },
+    {
+        "category": "Passport",
+        "country": "Seychelles",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SC"
+    },
+    {
+        "category": "Passport",
+        "country": "Sierra Leone",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "SL"
+    },
+    {
+        "category": "Passport",
+        "country": "Singapore",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SG"
+    },
+    {
+        "category": "Baby Passport",
+        "country": "Singapore",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SG"
+    },
+    {
+        "category": "ID Card",
+        "country": "Singapore",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SG"
+    },
+    {
+        "category": "Passport",
+        "country": "Sint Maarten",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SX"
+    },
+    {
+        "category": "Passport",
+        "country": "Slovakia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SK"
+    },
+    {
+        "category": "Passport",
+        "country": "Slovenia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SI"
+    },
+    {
+        "category": "Passport",
+        "country": "So. Georgia & So. Sandwich Isl.",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GS"
+    },
+    {
+        "category": "Passport",
+        "country": "Solomon Islands",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SB"
+    },
+    {
+        "category": "Passport",
+        "country": "South Africa",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ZA"
+    },
+    {
+        "category": "Visa",
+        "country": "South Africa",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ZA"
+    },
+    {
+        "category": "ID Photo",
+        "country": "South Africa",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ZA"
+    },
+    {
+        "category": "Driving License",
+        "country": "South Africa",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ZA"
+    },
+    {
+        "category": "Passport",
+        "country": "South Korea",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "KR"
+    },
+    {
+        "category": "Visa",
+        "country": "South Korea",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "KR"
+    },
+    {
+        "category": "Passport",
+        "country": "Spain",
+        "unit": "mm",
+        "size_width": "26",
+        "size_height": "32",
+        "region_code": "ES"
+    },
+    {
+        "category": "DNI",
+        "country": "Spain",
+        "unit": "mm",
+        "size_width": "26",
+        "size_height": "32",
+        "region_code": "ES"
+    },
+    {
+        "category": "Driving Licence",
+        "country": "Spain",
+        "unit": "mm",
+        "size_width": "26",
+        "size_height": "32",
+        "region_code": "ES"
+    },
+    {
+        "category": "NIE",
+        "country": "Spain",
+        "unit": "mm",
+        "size_width": "26",
+        "size_height": "32",
+        "region_code": "ES"
+    },
+    {
+        "category": "Gun License",
+        "country": "Spain",
+        "unit": "mm",
+        "size_width": "26",
+        "size_height": "32",
+        "region_code": "ES"
+    },
+    {
+        "category": "Passport",
+        "country": "Sri Lanka",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "LK"
+    },
+    {
+        "category": "Passport",
+        "country": "St. Barthélemy",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "BL"
+    },
+    {
+        "category": "Passport",
+        "country": "St. Helena",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SH"
+    },
+    {
+        "category": "Passport",
+        "country": "St. Kitts & Nevis",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "KN"
+    },
+    {
+        "category": "Passport",
+        "country": "St. Lucia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "LC"
+    },
+    {
+        "category": "Passport",
+        "country": "St. Martin",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "MF"
+    },
+    {
+        "category": "Passport",
+        "country": "St. Pierre & Miquelon",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "PM"
+    },
+    {
+        "category": "Passport",
+        "country": "St. Vincent & Grenadines",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "VC"
+    },
+    {
+        "category": "Passport",
+        "country": "Suriname",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SR"
+    },
+    {
+        "category": "Passport",
+        "country": "Svalbard & Jan Mayen",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SJ"
+    },
+    {
+        "category": "Passport",
+        "country": "Sweden",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "SE"
+    },
+    {
+        "category": "Passport",
+        "country": "Switzerland",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "CH"
+    },
+    {
+        "category": "Passport",
+        "country": "Taiwan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TW"
+    },
+    {
+        "category": "Visa",
+        "country": "Taiwan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TW"
+    },
+    {
+        "category": "ID Card",
+        "country": "Taiwan",
+        "unit": "mm",
+        "size_width": "51",
+        "size_height": "51",
+        "region_code": "TW"
+    },
+    {
+        "category": "Driving Licence",
+        "country": "Taiwan",
+        "unit": "mm",
+        "size_width": "28",
+        "size_height": "35",
+        "region_code": "TW"
+    },
+    {
+        "category": "Passport",
+        "country": "Tajikistan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TJ"
+    },
+    {
+        "category": "Passport",
+        "country": "Tanzania",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Thailand",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TH"
+    },
+    {
+        "category": "Visa",
+        "country": "Thailand",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TH"
+    },
+    {
+        "category": "Visa On Arrival",
+        "country": "Thailand",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "TH"
+    },
+    {
+        "category": "Certificate of Residence",
+        "country": "Thailand",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "TH"
+    },
+    {
+        "category": "Passport",
+        "country": "Timor-Leste",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "40",
+        "region_code": "TL"
+    },
+    {
+        "category": "Passport",
+        "country": "Togo",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "TG"
+    },
+    {
+        "category": "Passport",
+        "country": "Tokelau",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TK"
+    },
+    {
+        "category": "Passport",
+        "country": "Tonga",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TO"
+    },
+    {
+        "category": "Passport",
+        "country": "Trinidad & Tobago",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TT"
+    },
+    {
+        "category": "Passport",
+        "country": "Tunisia",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TN"
+    },
+    {
+        "category": "Passport",
+        "country": "Turkey",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "60",
+        "region_code": "TR"
+    },
+    {
+        "category": "Visa",
+        "country": "Turkey",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "60",
+        "region_code": "TR"
+    },
+    {
+        "category": "Passport",
+        "country": "Turkmenistan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TM"
+    },
+    {
+        "category": "Passport",
+        "country": "Turks & Caicos Islands",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "TC"
+    },
+    {
+        "category": "Passport",
+        "country": "Tuvalu",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "TV"
+    },
+    {
+        "category": "Passport",
+        "country": "U.S. Outlying Islands",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "UM"
+    },
+    {
+        "category": "Passport",
+        "country": "U.S. Virgin Islands",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "VI"
+    },
+    {
+        "category": "Passport",
+        "country": "Uganda",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "UG"
+    },
+    {
+        "category": "Passport",
+        "country": "Ukraine",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "UA"
+    },
+    {
+        "category": "Passport",
+        "country": "United Arab Emirates",
+        "unit": "mm",
+        "size_width": "43",
+        "size_height": "55",
+        "region_code": "AE"
+    },
+    {
+        "category": "Passport",
+        "country": "United Kingdom",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GB"
+    },
+    {
+        "category": "Digital Passport",
+        "country": "United Kingdom",
+        "unit": "px",
+        "size_width": "900",
+        "size_height": "1200",
+        "region_code": "GB"
+    },
+    {
+        "category": "Passport Online",
+        "country": "United Kingdom",
+        "unit": "px",
+        "size_width": "900",
+        "size_height": "1200",
+        "region_code": "GB"
+    },
+    {
+        "category": "Driving Licence",
+        "country": "United Kingdom",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GB"
+    },
+    {
+        "category": "Visa",
+        "country": "United Kingdom",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "GB"
+    },
+    {
+        "category": "U.S. Passport",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "Baby Passport",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "AAA Passport",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "Costco Passport",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "Walmart Passport",
+        "country": "United States",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "US"
+    },
+    {
+        "category": "FedEx Office Passport",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "CVS Pharmacy Passport",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "Visa",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "Green Card",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "Citizenship",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "USA Form I-130",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "2",
+        "size_height": "2",
+        "region_code": "US"
+    },
+    {
+        "category": "NY Gun License",
+        "country": "United States",
+        "unit": "in",
+        "size_width": "1.5",
+        "size_height": "1.5",
+        "region_code": "US"
+    },
+    {
+        "category": "Passport",
+        "country": "Uruguay",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "UY"
+    },
+    {
+        "category": "Passport",
+        "country": "Uzbekistan",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "UZ"
+    },
+    {
+        "category": "Passport",
+        "country": "Vanuatu",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "VU"
+    },
+    {
+        "category": "Passport",
+        "country": "Vatican City",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "VA"
+    },
+    {
+        "category": "Passport",
+        "country": "Venezuela",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "50",
+        "region_code": "VE"
+    },
+    {
+        "category": "Passport",
+        "country": "Vietnam",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "VN"
+    },
+    {
+        "category": "Passport",
+        "country": "Wallis & Futuna",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "WF"
+    },
+    {
+        "category": "Passport",
+        "country": "Western Sahara",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "EH"
+    },
+    {
+        "category": "Passport",
+        "country": "Yemen",
+        "unit": "mm",
+        "size_width": "40",
+        "size_height": "60",
+        "region_code": "YE"
+    },
+    {
+        "category": "Passport",
+        "country": "Zambia",
+        "unit": "mm",
+        "size_width": "50",
+        "size_height": "50",
+        "region_code": "ZM"
+    },
+    {
+        "category": "Passport",
+        "country": "Zimbabwe",
+        "unit": "mm",
+        "size_width": "35",
+        "size_height": "45",
+        "region_code": "ZW"
+    }
+]
