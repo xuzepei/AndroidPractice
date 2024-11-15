@@ -37,13 +37,13 @@ public class ImageProcessor {
         this.originalBitmap = originalBitmap;
         this.resultCallback = callback;
 
-        processWithMediaPipe(1);
+        processWithMediaPipe(0);
     }
 
     void processWithMediaPipe(int maskType) {
 
         BaseOptions.Builder baseOptionsBuilder = BaseOptions.builder();
-        baseOptionsBuilder.setModelAssetPath("selfie_multiclass.tflite");
+        baseOptionsBuilder.setModelAssetPath("selfie_multiclass1.tflite");
         baseOptionsBuilder.setDelegate(Delegate.CPU);
 
         ImageSegmenter imageSegmenter = null;

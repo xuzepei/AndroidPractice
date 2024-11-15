@@ -5,18 +5,39 @@ import static android.graphics.Color.parseColor;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
+import android.content.ActivityNotFoundException;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.provider.OpenableColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.kongzue.dialogx.DialogX;
+import com.kongzue.dialogx.dialogs.BottomMenu;
+import com.kongzue.dialogx.dialogs.MessageDialog;
+import com.kongzue.dialogx.interfaces.OnBottomMenuButtonClickListener;
+import com.kongzue.dialogx.interfaces.OnMenuItemClickListener;
+import com.kongzue.dialogx.style.IOSStyle;
+import com.kongzue.dialogx.util.TextInfo;
+
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import dev.eren.removebg.RemoveBg;
 import kotlin.Result;
@@ -26,9 +47,8 @@ import kotlin.coroutines.CoroutineContext;
 import kotlin.coroutines.EmptyCoroutineContext;
 import kotlinx.coroutines.flow.FlowCollector;
 
-public class MainActivity extends AppCompatActivity {
-
-    Bitmap originalBitmap;
+public class MainActivity extends BaseActivity {
+    Button selectBtn;
 
     ImageView imageView;
     Button removeBgBtn;
@@ -39,10 +59,40 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageView3;
     Button removeBgBtn3;
 
+    String currentPhotoPath = "";
+    Bitmap originalBitmap = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        requestPermissionCallback = new RequestPermissionCallback() {
+            @Override
+            public void onResult(boolean granted, int requestCode, Context context) {
+                switch (requestCode) {
+                    case CAMERA_REQUEST: {
+                        if (granted) {
+                            selectPhotoFromCamera();
+                        } else {
+                        }
+                    }
+                    break;
+                    case STORAGE_REQUEST: {
+                    }
+                    break;
+                }
+            }
+        };
+
+
+        selectBtn = findViewById(R.id.select_btn);
+        selectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showSelectionBottomMenu();
+            }
+        });
 
         imageView = findViewById(R.id.imageView);
         imageView.setBackgroundColor(parseColor("#ff0000"));
@@ -187,5 +237,212 @@ public class MainActivity extends AppCompatActivity {
     void clickedRemoveBgBtn3() {
         RemoveBg removeBg = new RemoveBg(this);
         removeBg.clearBackground(originalBitmap).collect(flowCollector2, continuation);
+    }
+
+    void showSelectionBottomMenu() {
+
+        DialogX.globalStyle = IOSStyle.style();
+
+        List<CharSequence> list = new ArrayList<>();
+        list.add("Camera");
+        list.add("Album");
+        BottomMenu.show("", "Select photo source", list)
+                .setStyle(IOSStyle.style())
+                .setCancelButton("Cancel", new OnBottomMenuButtonClickListener<BottomMenu>() {
+                    @Override
+                    public boolean onClick(BottomMenu dialog, View v) {
+                        Log.d("####", "Clicked cancel button.");
+                        return false;
+                    }
+                })
+                .setCancelable(false)
+                .setOnMenuItemClickListener(new OnMenuItemClickListener<BottomMenu>() {
+                    @Override
+                    public boolean onClick(BottomMenu dialog, CharSequence text, int index) {
+                        Log.d("####", "Clicked menu item: " + index);
+                        if (index == 0) {
+                            //调用相机需要用户授权
+                            boolean result = requestCameraPermission();
+                            if (result) {
+                                selectPhotoFromCamera();
+                            }
+                        } else if (index == 1) {
+                            //从相册取图片不需要用户授权
+                            selectPhotoFromAlbum();
+                        }
+                        return false;
+                    }
+                });
+    }
+
+    private File createImageFile() throws IOException {
+        // Create an image file name
+        //String fileName = System.currentTimeMillis() + ".jpg";
+        String imageFileName = "temp_source_photo";
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File imageFile = File.createTempFile(imageFileName, ".jpg", storageDir);
+        Tool.removeFile(imageFile);
+
+        // Save a file: path for use with ACTION_VIEW intents
+        currentPhotoPath = imageFile.getAbsolutePath();
+        return imageFile;
+    }
+
+    void selectPhotoFromCamera() {
+
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        try {
+            File photoFile = null;
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+                // 处理错误情况
+                ex.printStackTrace();
+            }
+            if (photoFile != null) {
+                Uri photoURI = FileProvider.getUriForFile(this, this.getApplicationContext().getPackageName() + ".provider", photoFile);
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+
+                startActivityForResult(intent, REQUEST_PHOTO_FROM_CAMERA);
+            }
+        } catch (ActivityNotFoundException e) {
+            // display error state to the user
+            e.printStackTrace();
+        }
+    }
+
+    void selectPhotoFromAlbum() {
+
+//        if (com.photo.easyidphoto.BuildConfig.DEBUG) {
+//            goToPhotoEditorActivity();
+//        } else {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(intent, REQUEST_PHOTO_FROM_ALBUM);
+        //       }
+
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //拍照或相册选择后的处理
+        if (resultCode == RESULT_OK) {
+            if (requestCode == REQUEST_PHOTO_FROM_CAMERA) {
+                // 处理照片（photoURI中保存了照片的URI）
+                Bitmap sourceBitmap = BitmapFactory.decodeFile(currentPhotoPath);
+                if (sourceBitmap != null) {
+                    sourceBitmap = Tool.rotateImageIfRequired(sourceBitmap, currentPhotoPath);
+                    String tempImageName = "temp_source_photo.jpg";
+
+                    boolean result = Tool.saveImage(sourceBitmap, tempImageName, Bitmap.CompressFormat.JPEG);
+                    if (result) {
+                        // 处理选择照片结果
+                        Uri photoUri = Uri.fromFile(Tool.getLocalImagePath(tempImageName));
+                        //startImageCrop(photoUri); //先裁剪
+                        handleSourceImage(photoUri);
+                    }
+                }
+
+            } else if (requestCode == REQUEST_PHOTO_FROM_ALBUM) {
+                if (data == null) {
+                    return;
+                }
+
+                // 处理选择照片结果
+                Uri photoUri = data.getData();
+                try {
+                    Bitmap bitmap = getBitmapFromUri(photoUri);
+                    Bitmap sourceBitmap = Tool.rotateImageIfRequired(bitmap, photoUri);
+                    String tempImageName = "temp_source_photo.jpg";
+                    boolean result = Tool.saveImage(sourceBitmap, tempImageName, Bitmap.CompressFormat.JPEG);
+                    if (result) {
+                        // 处理选择照片结果
+                        photoUri = Uri.fromFile(Tool.getLocalImagePath(tempImageName));
+                        //startImageCrop(photoUri); //先裁剪
+                        handleSourceImage(photoUri);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                // 在这里处理选择的照片
+            } else if (requestCode == REQUEST_IMAGE_CROPPER) {
+
+            }
+        } else {
+        }
+    }
+
+    private long getFileSizeFromUri(Uri uri) {
+        long fileSize = 0;
+        ContentResolver contentResolver = getContentResolver();
+        Cursor cursor = null;
+        try {
+            cursor = contentResolver.query(uri, null, null, null, null);
+            if (cursor != null && cursor.moveToFirst()) {
+                int sizeIndex = cursor.getColumnIndex(OpenableColumns.SIZE);
+                if (!cursor.isNull(sizeIndex)) {
+                    fileSize = cursor.getLong(sizeIndex);
+                }
+            }
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+        return fileSize;
+    }
+
+    private Bitmap getBitmapFromUri(Uri uri) throws IOException {
+        ContentResolver contentResolver = getContentResolver();
+        InputStream inputStream = contentResolver.openInputStream(uri);
+        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+        if (inputStream != null) {
+            inputStream.close();
+        }
+        return bitmap;
+    }
+
+    void handleSourceImage(Uri imageUri) {
+        Log.d("####", "handleSourceImage");
+
+        Bitmap bitmap = null;
+        try {
+            long fileSizeInBytes = getFileSizeFromUri(imageUri);
+            Log.d("####", "selected image file size:" + fileSizeInBytes);
+            if (fileSizeInBytes > 5 * 1024 * 1024) {
+                MessageDialog.show("Tip", "The photo is too large.", "ok").setOkTextInfo(new TextInfo().setFontSize(16));
+                return;
+            }
+            bitmap = getBitmapFromUri(imageUri);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (bitmap == null) {
+            return;
+        }
+
+        bitmap = Tool.resizeImage(bitmap, 1024, 1024);
+        if (bitmap == null) {
+            return;
+        }
+
+        boolean res = Tool.saveImage(bitmap, Tool.source_photo_name, Bitmap.CompressFormat.JPEG);
+        if (res == false) {
+            return;
+        }
+
+        File imageFile = Tool.getLocalImagePath(Tool.source_photo_name);
+        if (!imageFile.exists()) {
+            return;
+        }
+
+        originalBitmap = bitmap;
+        imageView.setImageBitmap(originalBitmap);
+        imageView2.setImageBitmap(originalBitmap);
+        imageView3.setImageBitmap(originalBitmap);
+
     }
 }
