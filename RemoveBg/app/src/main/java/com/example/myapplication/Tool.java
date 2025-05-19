@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -712,6 +713,42 @@ public class Tool {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(number);
         return matcher.matches();
+    }
+
+
+    public static File localModelDirectory() {
+        File dir = MainApplication.context.getExternalFilesDir(null);
+        String folderName = "models";
+        File imageDir = new File(dir, folderName);
+
+        if (!imageDir.exists()) {
+            if (imageDir.mkdir()) {
+                // 文件夹创建成功
+            } else {
+                // 文件夹创建失败
+            }
+        }
+
+        return imageDir;
+    }
+
+    public static File loadModelFileFromAssets(Context context, String assetName) throws IOException {
+        AssetManager assetManager = context.getAssets();
+        InputStream inputStream = assetManager.open(assetName);
+
+        // 临时文件路径（可缓存目录）
+        File outFile = new File(localModelDirectory(), assetName);
+        try (FileOutputStream outputStream = new FileOutputStream(outFile)) {
+            byte[] buffer = new byte[4096];
+            int length;
+            while ((length = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, length);
+            }
+            outputStream.flush();
+        }
+
+        inputStream.close();
+        return outFile;
     }
 
 }

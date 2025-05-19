@@ -30,6 +30,8 @@ android {
 
 dependencies {
 
+    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.16.3'
+
     implementation 'com.github.erenalpaslan:removebg:1.0.4'
     implementation 'com.google.mediapipe:tasks-vision:0.10.15'
 

@@ -1,7 +1,11 @@
 package com.example.myapplication;
 
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 
 import com.google.mediapipe.framework.image.BitmapImageBuilder;
 import com.google.mediapipe.framework.image.ByteBufferExtractor;
@@ -238,4 +242,59 @@ public class ImageProcessor {
         return resultBitmap;
     }
     */
+
+    static FloatBuffer preprocessBitmap(Bitmap bitmap) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        FloatBuffer buffer = FloatBuffer.allocate(3 * height * width);
+
+        int[] pixels = new int[width * height];
+        bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+
+        // Normalize to [-1, 1]
+        for (int c = 0; c < 3; c++) { // channel-first
+            for (int i = 0; i < pixels.length; i++) {
+                int color = pixels[i];
+                int value = 0;
+                switch (c) {
+                    case 0: value = (color >> 16) & 0xFF; break; // R
+                    case 1: value = (color >> 8) & 0xFF; break;  // G
+                    case 2: value = color & 0xFF; break;         // B
+                }
+                float normalized = (value / 255.0f - 0.5f) / 0.5f; // => [-1,1]
+                buffer.put(c * width * height + i, normalized);
+            }
+        }
+
+        return buffer;
+    }
+
+    static Bitmap createAlphaBitmap(float[][] matte, int width, int height) {
+        int h = matte.length;
+        int w = matte[0].length;
+
+        Bitmap alpha = Bitmap.createBitmap(width, height, Bitmap.Config.ALPHA_8);
+        for (int y = 0; y < height; y++) {
+            int srcY = Math.min((int) ((float) y * h / height), h - 1);
+            for (int x = 0; x < width; x++) {
+                int srcX = Math.min((int) ((float) x * w / width), w - 1);
+                int a = Math.min(255, Math.max(0, (int) (matte[srcY][srcX] * 255)));
+                alpha.setPixel(x, y, Color.argb(a, 0, 0, 0));
+            }
+        }
+        return alpha;
+    }
+
+    static Bitmap combineRGBWithAlpha(Bitmap rgb, Bitmap alpha) {
+        Bitmap result = Bitmap.createBitmap(rgb.getWidth(), rgb.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(result);
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+        canvas.drawBitmap(rgb, 0, 0, paint);
+
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+        canvas.drawBitmap(alpha, 0, 0, paint);
+
+        return result;
+    }
 }

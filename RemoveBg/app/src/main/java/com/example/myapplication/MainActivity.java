@@ -36,9 +36,14 @@ import com.kongzue.dialogx.util.TextInfo;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.FloatBuffer;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+import ai.onnxruntime.OnnxTensor;
+import ai.onnxruntime.OrtEnvironment;
+import ai.onnxruntime.OrtSession;
 import dev.eren.removebg.RemoveBg;
 import kotlin.Result;
 import kotlin.Unit;
@@ -137,7 +142,7 @@ public class MainActivity extends BaseActivity {
         InputStream inputStream = null;
         try {
             // 打开 assets 目录中的图像文件
-            inputStream = assetManager.open("photo2.jpg");
+            inputStream = assetManager.open("photo.jpg");
             // 将 InputStream 转换为 Bitmap
             Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
             // 设置到 ImageView 中
@@ -195,7 +200,7 @@ public class MainActivity extends BaseActivity {
         @Override
         public Object emit(Bitmap value, Continuation<? super Unit> continuation) {
             // Handle the emitted Bitmap here
-            Log.d("####", "Received a Bitmap: " + value);
+
 
 //            runOnUiThread(new Runnable() {
 //                @Override
@@ -224,14 +229,33 @@ public class MainActivity extends BaseActivity {
     }
 
     void clickedRemoveBgBtn2() {
-        ImageProcessor.shared().removeBackground(originalBitmap, new ResultCallback() {
-            @Override
-            public void OnResult(boolean b, Object data) {
-                if (data != null) {
-                    imageView2.setImageBitmap((Bitmap) data);
-                }
-            }
-        });
+//        ImageProcessor.shared().removeBackground(originalBitmap, new ResultCallback() {
+//            @Override
+//            public void OnResult(boolean b, Object data) {
+//                if (data != null) {
+//                    imageView2.setImageBitmap((Bitmap) data);
+//                }
+//            }
+//        });
+
+        try {
+            File modelFile = Tool.loadModelFileFromAssets(this, "modnet.onnx"); // 确保模型文件已存在
+            // 调用处理方法
+            Bitmap resultBitmap = processPortrait(this, originalBitmap, modelFile);
+
+            // 主线程显示结果
+            runOnUiThread(() -> {
+                imageView2.setImageBitmap(resultBitmap);
+            });
+
+            // 可选：保存 PNG
+//            File outFile = new File(getExternalFilesDir(null), "output.png");
+//            saveBitmap(resultBitmap, outFile);
+
+        } catch (Exception e) {
+            Log.d("####", e.toString());
+        }
+
     }
 
     void clickedRemoveBgBtn3() {
@@ -444,5 +468,40 @@ public class MainActivity extends BaseActivity {
         imageView2.setImageBitmap(originalBitmap);
         imageView3.setImageBitmap(originalBitmap);
 
+    }
+
+    public Bitmap processPortrait(Context context, Bitmap bitmap, File modelFile) throws Exception {
+        OrtEnvironment env = OrtEnvironment.getEnvironment();
+        OrtSession.SessionOptions options = new OrtSession.SessionOptions();
+        Log.d("####", modelFile.getAbsolutePath());
+        if (!modelFile.exists())
+            return null;
+
+        OrtSession session = env.createSession(modelFile.getAbsolutePath(), options);
+
+        // 固定输入尺寸为 512x512
+        int originalW = bitmap.getWidth();
+        int originalH = bitmap.getHeight();
+        int targetW = 512;
+        int targetH = 512;
+
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, targetW, targetH, true);
+
+        FloatBuffer inputBuffer = ImageProcessor.preprocessBitmap(resizedBitmap);
+        long[] inputShape = new long[]{1, 3, targetH, targetW};
+        OnnxTensor inputTensor = OnnxTensor.createTensor(env, inputBuffer, inputShape);
+
+        String inputName = session.getInputNames().iterator().next();
+        OrtSession.Result result = session.run(Collections.singletonMap(inputName, inputTensor));
+
+        float[][][] matte3d = ((float[][][][]) result.get(0).getValue())[0];
+        float[][] matte2d = matte3d[0]; // [H][W]
+
+        // 生成掩码
+        Bitmap alphaBitmap = ImageProcessor.createAlphaBitmap(matte2d, targetW, targetH);
+        Bitmap finalAlphaBitmap = Bitmap.createScaledBitmap(alphaBitmap, originalW, originalH, true);
+
+        // 使用原图 + 放大后的 matte 合成
+        return ImageProcessor.combineRGBWithAlpha(bitmap, finalAlphaBitmap);
     }
 }

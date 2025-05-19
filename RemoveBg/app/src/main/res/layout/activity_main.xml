@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
-                android:text="Remove bg with mediapipe">
+                android:text="Remove bg with Modnet">
             </Button>
 
             <ImageView
